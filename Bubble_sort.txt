@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a[10];
+  int temp;
+  int i;
+  int j; clrscr();
+  printf("Enter elements into array:-");
+  for(i=0;i<=9;i++)
+  scanf("%d",&a[i]);
+  clrscr();
+  printf("The Unsorted list is :-");
+  for(i=0;i<=9;i++)
+  printf("%d\t",a[i]);
+  /*Programming logic*/
+  for(i=9;i>=0;i--)
+  {
+    for(j=0;j<=i-1;j++)
+    {
+       if(a[j]>a[j+1] )
+       {
+	temp =a[j];
+	a[j] = a[j+1];
+	a[j+1]=temp;
+	}
+     }
+   }
+   printf("\nThe Sorted list is:-" );
+   for(i=0;i<=9;i++)
+   printf("%d\t",a[i]);
+   return 0;
+   }
